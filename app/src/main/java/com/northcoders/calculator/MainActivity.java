@@ -1,7 +1,9 @@
 package com.northcoders.calculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -38,53 +40,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        listeners();
-
+        startButtonListeners();
         outputBox = findViewById(R.id.result_box);
-
-        reset();
-
     }
 
-    private void inputHandler() {
-
+    private void startButtonListeners() {
         inputBox1 = findViewById(R.id.number_a);
-        String inputBoxOneData = String.valueOf(inputBox1).trim().replaceAll("[^0-9]", "");
+        inputBox1.setOnClickListener(v -> {
+                inputHandlerNumberA();
+        });
 
         inputBox2 = findViewById(R.id.number_b);
-        String inputBoxTwoData = String.valueOf(inputBox2).trim().replaceAll("[^0-9]", "");
-    }
+        inputBox2.setOnClickListener(v -> {
+                inputHandlerNumberB();
+        });
 
-    private void add() {
-        inputHandler();
-
-        result = a + b;
-        outputBox.setText(result);
-
-    }
-
-    private void minus() {
-        inputHandler();
-
-        result = a - b;
-        outputBox.setText(result);
-    }
-
-    private void divide() {
-        inputHandler();
-
-        result = a / b;
-        outputBox.setText(result);
-    }
-
-    private void multiply() {
-        inputHandler();
-
-        result = a * b;
-        outputBox.setText(result);
-    }
-
-    private void listeners() {
         addButton = findViewById(R.id.button6);
         addButton.setOnClickListener(v -> {
             add();
@@ -109,16 +79,42 @@ public class MainActivity extends AppCompatActivity {
         resetButton.setOnClickListener(v -> {
             reset();
         });
+    }
 
+    private int inputHandlerNumberA() {
+        String inputBoxOneData = String.valueOf(inputBox1).trim().replaceAll("[^0-9]", "");
+        return Integer.parseInt(inputBoxOneData);
+    }
 
+    private int inputHandlerNumberB() {
+        String inputBoxTwoData = String.valueOf(inputBox2).trim().replaceAll("[^0-9]", "");
+        return Integer.parseInt(inputBoxTwoData);
+    }
+
+    private void add() {
+        result = a + b;
+        outputBox.setText(result);
+    }
+
+    private void minus() {
+        result = a - b;
+        outputBox.setText(result);
+    }
+
+    private void divide() {
+        result = a / b;
+        outputBox.setText(result);
+    }
+
+    private void multiply() {
+        result = a * b;
+        outputBox.setText(result);
     }
 
     private void reset() {
-        outputBox.setText(result);
-
         a = 0;
         b = 0;
         result = 0;
-
+        outputBox.setText(result);
     }
 }
