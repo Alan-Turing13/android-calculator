@@ -16,8 +16,8 @@
         android:layout_marginEnd="168dp"
         android:layout_marginBottom="@dimen/input_marginBottom"
         android:ems="10"
-        android:inputType="text"
         android:hint="int a;"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,69 +27,83 @@
         android:id="@+id/number_b"
         android:layout_width="@dimen/input_width"
         android:layout_height="@dimen/input_height"
+        android:layout_marginStart="168dp"
         android:layout_marginTop="@dimen/input_marginTop"
+        android:layout_marginEnd="14dp"
         android:layout_marginBottom="@dimen/input_marginBottom"
         android:ems="10"
-        android:inputType="text"
         android:hint="int b;"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="14dp"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/result_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="268dp"
         app:layout_constraintEnd_toEndOf="200dp"
-        app:layout_constraintTop_toTopOf="200dp"/>
+        app:layout_constraintTop_toTopOf="200dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="268dp" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subtract"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="268dp"
         app:layout_constraintEnd_toEndOf="200dp"
-        app:layout_constraintTop_toTopOf="200dp"/>
+        app:layout_constraintTop_toTopOf="200dp"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="268dp" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Multiply"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="395dp"
         app:layout_constraintEnd_toEndOf="200dp"
-        app:layout_constraintTop_toTopOf="200dp"/>
+        app:layout_constraintTop_toTopOf="200dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="395dp" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Divide"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="395dp"
         app:layout_constraintEnd_toEndOf="200dp"
         app:layout_constraintTop_toTopOf="200dp"
-        />
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="395dp" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="517dp"
         app:layout_constraintEnd_toEndOf="200dp"
         app:layout_constraintTop_toTopOf="200dp"
-    />
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="517dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
