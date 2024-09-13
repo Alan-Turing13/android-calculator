@@ -72,6 +72,7 @@
             android:layout_marginStart="152dp"
 
             android:layout_marginBottom="196dp"
+            android:backgroundTint="#009688"
             android:text="Reset"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -80,9 +81,10 @@
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
+            android:layout_marginStart="83dp"
 
             android:layout_marginTop="140dp"
+            android:backgroundTint="#FF9800"
             android:text="Add"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/number_a" />
@@ -91,9 +93,10 @@
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="144dp"
 
-            android:layout_marginEnd="64dp"
+            android:layout_marginEnd="70dp"
+            android:backgroundTint="#E91E63"
             android:text="Subtract"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/number_b" />
@@ -105,6 +108,7 @@
             android:layout_marginEnd="80dp"
 
             android:layout_marginBottom="76dp"
+            android:backgroundTint="#2196F3"
             android:text="Divide"
             app:layout_constraintBottom_toTopOf="@+id/button10"
             app:layout_constraintEnd_toEndOf="parent" />
