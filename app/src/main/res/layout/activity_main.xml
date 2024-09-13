@@ -1,111 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/number_a"
-        android:layout_width="@dimen/input_width"
-        android:layout_height="@dimen/input_height"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="@dimen/input_marginTop"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="@dimen/input_marginBottom"
-        android:ems="10"
-        android:hint="int a;"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="calculator"
+            type="com.northcoders.calculator.Calculator"
+        />
+    </data>
 
-    <EditText
-        android:id="@+id/number_b"
-        android:layout_width="@dimen/input_width"
-        android:layout_height="@dimen/input_height"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="@dimen/input_marginTop"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="@dimen/input_marginBottom"
-        android:ems="10"
-        android:hint="int b;"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <EditText
-        android:id="@+id/result_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="29dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number_a" />
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
+        <EditText
+            android:id="@+id/number_a"
+            android:layout_width="114dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="@dimen/input_marginTop"
+            android:layout_marginEnd="168dp"
+            android:layout_marginBottom="@dimen/input_marginBottom"
+            android:ems="10"
+            android:hint="int a;"
+            android:inputType="number"
+            android:text="@={`` + calculator.a}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-
-        android:layout_marginTop="97dp"
-        android:text="Add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number_a" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="97dp"
-
-        android:layout_marginEnd="67dp"
-        android:text="Subtract"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number_b" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-
-        android:layout_marginBottom="74dp"
-        android:text="Multiply"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="82dp"
-
-        android:layout_marginBottom="74dp"
-        android:text="Divide"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-
-        android:layout_marginBottom="242dp"
-        android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/number_b"
+            android:layout_width="120dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="@dimen/input_marginTop"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="@dimen/input_marginBottom"
+            android:ems="10"
+            android:hint="int b;"
+            android:inputType="number"
+            android:text="@={`` + calculator.b}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/result_box"
+            android:layout_width="196dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:text="@{`` + calculator.result}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_a" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+
+            android:layout_marginBottom="196dp"
+            android:text="Reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+
+            android:layout_marginTop="140dp"
+            android:text="Add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_a" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+
+            android:layout_marginEnd="64dp"
+            android:text="Subtract"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_b" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+
+            android:layout_marginBottom="76dp"
+            android:text="Divide"
+            app:layout_constraintBottom_toTopOf="@+id/button10"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+
+            android:layout_marginBottom="76dp"
+            android:text="Multiply"
+            app:layout_constraintBottom_toTopOf="@+id/button10"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
